@@ -3,10 +3,12 @@ package fr.husta.test;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Range;
+
 public class MonBean
 {
 
-    // @NotNull(message = "Age ne doit pas etre null")
+    @Range(min = 0, max = 200)
     private int age;
 
     @NotNull(message = "Nom obligatoire")
