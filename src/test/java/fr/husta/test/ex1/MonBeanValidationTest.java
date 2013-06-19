@@ -1,7 +1,5 @@
 package fr.husta.test.ex1;
 
-import static org.junit.Assert.*;
-
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -14,9 +12,12 @@ import junit.framework.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import fr.husta.test.ex1.Groupe1Checks;
-import fr.husta.test.ex1.MonBean;
-
+/**
+ * Simple validation tests.
+ * 
+ * @author HUSTA
+ *
+ */
 public class MonBeanValidationTest
 {
 
@@ -54,7 +55,6 @@ public class MonBeanValidationTest
 
         System.out.println(constraintViolations);
 
-        
         // TEST #3
         MonBean monBean3 = new MonBean();
         monBean3.setAge(2);
@@ -66,7 +66,6 @@ public class MonBeanValidationTest
 
         System.out.println(constraintViolations);
 
-        
     }
 
 }
