@@ -12,9 +12,15 @@ API Documentation
 * [Bean Validation 1.0 (JSR 303)](http://beanvalidation.org/1.0/)
 * [Bean Validation 1.1 (JSR 349)](http://beanvalidation.org/1.1/)
 
-### Using Bean Validation 1.0 in Java EE 6
+### Bean Validation 1.0 in Java EE 6
 
 * [Using Bean Validation](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html)
+
+### Bean Validation 1.1 in Java EE 7
+
+* [Overview](http://docs.oracle.com/javaee/7/tutorial/doc/overview008.htm#GJXTY)
+* [Using Bean Validation](http://docs.oracle.com/javaee/7/tutorial/doc/jsf-develop004.htm#GIRCZ)
+* [Bean Validation: Advanced Topics](http://docs.oracle.com/javaee/7/tutorial/doc/bean-validation-advanced.htm#GKAHP)
 
 ### Hibernate Validator Documentation
 
