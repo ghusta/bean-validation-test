@@ -32,7 +32,6 @@ public class MonBeanValidationTest
     @Test
     public void testValidation() throws Exception
     {
-
         Set<ConstraintViolation<MonBean>> constraintViolations = null;
 
         // TEST #1
