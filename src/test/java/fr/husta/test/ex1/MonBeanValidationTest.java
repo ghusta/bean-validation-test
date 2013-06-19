@@ -1,4 +1,4 @@
-package fr.husta.test;
+package fr.husta.test.ex1;
 
 import static org.junit.Assert.*;
 
@@ -13,6 +13,9 @@ import junit.framework.Assert;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import fr.husta.test.ex1.Groupe1Checks;
+import fr.husta.test.ex1.MonBean;
 
 public class MonBeanValidationTest
 {

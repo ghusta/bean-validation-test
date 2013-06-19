@@ -1,4 +1,4 @@
-package fr.husta.test;
+package fr.husta.test.ex1;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
