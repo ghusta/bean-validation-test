@@ -7,6 +7,10 @@ Sample project for testing Bean Validation 1.0 (JSR 303) &amp; Bean Validation 1
 API Documentation
 -----------------
 
+### Using Bean Validation 1.0 in Java EE 6
+
+* [Using Bean Validation](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html)
+
 ### Hibernate Validator Documentation
 
 From 4.3 version :
