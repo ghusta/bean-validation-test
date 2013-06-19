@@ -25,3 +25,12 @@ From 4.3 version :
 * [Chapter 2. Validation step by step](http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-usingvalidator.html)
 * [Chapter 3. Creating custom constraints](http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-customconstraints.html)
 * [Chapter 4. XML configuration](http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-xmlconfiguration.html)
+* etc.
+
+From 5.0 version :
+
+* [JSR 349 Reference Implementation -- Reference Guide](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/)
+* [Chapter 1. Getting started](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/validator-gettingstarted.html)
+* [Chapter 2. Declaring and validating bean constraints](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-bean-constraints.html)
+* [Chapter 3. Declaring and validating method constraints](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-method-constraints.html)
+* etc.
