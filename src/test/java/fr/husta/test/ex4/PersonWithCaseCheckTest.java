@@ -21,6 +21,9 @@ public class PersonWithCaseCheckTest
     @BeforeClass
     public static void initGlobal()
     {
+        // set default locale to FR
+        Locale.setDefault(Locale.FRENCH);
+
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
     }
@@ -30,9 +33,6 @@ public class PersonWithCaseCheckTest
     {
         Set<ConstraintViolation<PersonWithCaseCheck>> constraintViolations = null;
         String interpolatedMessage = null;
-
-        // set default locale to EN
-        Locale.setDefault(Locale.ENGLISH);
 
         // TEST #1
         PersonWithCaseCheck bean1 = new PersonWithCaseCheck();
