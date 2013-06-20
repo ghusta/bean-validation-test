@@ -39,4 +39,6 @@ From 5.0 version :
 * [Chapter 1. Getting started](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/validator-gettingstarted.html)
 * [Chapter 2. Declaring and validating bean constraints](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-bean-constraints.html)
 * [Chapter 3. Declaring and validating method constraints](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-method-constraints.html)
+* [Chapter 4. Interpolating constraint error messages](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-message-interpolation.html)
+* [Chapter 5. Grouping constraints](http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-groups.html)
 * etc.
