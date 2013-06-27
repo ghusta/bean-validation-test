@@ -1,5 +1,7 @@
 package fr.husta.test.ex1;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -10,6 +12,11 @@ public class MonBean
 
     @Range(min = 0, max = 200)
     private int age;
+
+    @NotNull
+    @Min(value = 10L)
+    @Max(value = 999999999999999999L)
+    private Long longNumber;
 
     @NotNull(message = "Nom obligatoire")
     @Size(min = 1, max = 10)
@@ -51,6 +58,16 @@ public class MonBean
     public void setFirstName(String firstName)
     {
         this.firstName = firstName;
+    }
+
+    public Long getLongNumber()
+    {
+        return longNumber;
+    }
+
+    public void setLongNumber(Long longNumber)
+    {
+        this.longNumber = longNumber;
     }
 
 }
