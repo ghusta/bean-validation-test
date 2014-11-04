@@ -48,12 +48,12 @@ public class MonBeanValidationTest
 
         // TEST #2
         MonBean monBean2 = new MonBean();
-        //        monBean1.setAge(2);
-        monBean1.setAge2(1);
-        //        monBean1.setName("toto");
+        //        monBean2.setAge(2);
+        monBean2.setAge2(1);
+        //        monBean2.setName("toto");
 
         constraintViolations = validator.validate(monBean2);
-        assertTrue(constraintViolations.size() == 2);
+        assertTrue(constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
 
