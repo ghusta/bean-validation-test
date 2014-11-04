@@ -23,7 +23,7 @@ public class MonBean
 
     @NotNull(groups = { DecimalChecks.class })
     @DecimalMin(value = "1.0", groups = { DecimalChecks.class })
-    @DecimalMax(value = "100.0", groups = { DecimalChecks.class })
+    @DecimalMax(value = "100.0", inclusive = true, groups = { DecimalChecks.class })
     private BigDecimal decimalNumber;
 
     @NotNull(message = "Nom obligatoire")

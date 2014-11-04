@@ -80,12 +80,12 @@ public class MonBeanValidationTest
         MonBean monBean1 = new MonBean();
         monBean1.setAge(10);
         monBean1.setName("bob");
-        monBean1.setDecimalNumber(new BigDecimal("0.1"));
+        monBean1.setDecimalNumber(new BigDecimal("100.1"));
 
         constraintViolations = validator.validate(monBean1, DecimalChecks.class);
+        System.out.println(constraintViolations);
         assertTrue(constraintViolations.size() == 1);
 
-        System.out.println(constraintViolations);
     }
 
 }
