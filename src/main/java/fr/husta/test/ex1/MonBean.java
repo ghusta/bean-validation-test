@@ -1,9 +1,8 @@
 package fr.husta.test.ex1;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.math.BigDecimal;
+
+import javax.validation.constraints.*;
 
 import org.hibernate.validator.constraints.Range;
 
@@ -13,10 +12,19 @@ public class MonBean
     @Range(min = 0, max = 200)
     private int age;
 
+    @Min(1)
+    @Max(200)
+    private int age2;
+
     @NotNull
     @Min(value = 10L)
     @Max(value = 999999999999999999L)
     private Long longNumber;
+
+    @NotNull(groups = { DecimalChecks.class })
+    @DecimalMin(value = "1.0", groups = { DecimalChecks.class })
+    @DecimalMax(value = "100.0", groups = { DecimalChecks.class })
+    private BigDecimal decimalNumber;
 
     @NotNull(message = "Nom obligatoire")
     @Size(min = 1, max = 10)
@@ -70,4 +78,23 @@ public class MonBean
         this.longNumber = longNumber;
     }
 
+    public void setAge2(int age2)
+    {
+        this.age2 = age2;
+    }
+
+    public int getAge2()
+    {
+        return age2;
+    }
+
+    public BigDecimal getDecimalNumber()
+    {
+        return decimalNumber;
+    }
+
+    public void setDecimalNumber(BigDecimal decimalNumber)
+    {
+        this.decimalNumber = decimalNumber;
+    }
 }
