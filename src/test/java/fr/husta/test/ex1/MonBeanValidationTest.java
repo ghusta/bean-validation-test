@@ -39,9 +39,10 @@ public class MonBeanValidationTest
         monBean1.setAge(2);
         monBean1.setAge2(0);
         monBean1.setName("toto");
+        monBean1.setFirstName(null);
 
         constraintViolations = validator.validate(monBean1);
-        assertTrue(constraintViolations.size() == 1);
+        assertTrue("'age2' n'est pas >= 1", constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
         System.out.println(constraintViolations.iterator().next().getMessage());
@@ -53,7 +54,7 @@ public class MonBeanValidationTest
         //        monBean2.setName("toto");
 
         constraintViolations = validator.validate(monBean2);
-        assertTrue(constraintViolations.size() == 1);
+        assertTrue("Nom obligatoire", constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
 
@@ -72,7 +73,7 @@ public class MonBeanValidationTest
         monBean3.setFirstName(null);
 
         constraintViolations = validator.validate(monBean3, Groupe1Checks.class);
-        assertTrue(constraintViolations.size() == 1);
+        assertTrue("'firstName' ne peut pas être nul", constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
 
