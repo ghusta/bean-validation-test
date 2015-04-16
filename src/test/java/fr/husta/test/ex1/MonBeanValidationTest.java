@@ -14,9 +14,8 @@ import org.junit.Test;
 
 /**
  * Simple validation tests.
- * 
- * @author HUSTA
  *
+ * @author HUSTA
  */
 public class MonBeanValidationTest
 {
@@ -45,6 +44,7 @@ public class MonBeanValidationTest
         assertTrue(constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
+        System.out.println(constraintViolations.iterator().next().getMessage());
 
         // TEST #2
         MonBean monBean2 = new MonBean();
@@ -56,6 +56,13 @@ public class MonBeanValidationTest
         assertTrue(constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
+
+    }
+
+    @Test
+    public void testValidationWithGroups() throws Exception
+    {
+        Set<ConstraintViolation<MonBean>> constraintViolations = null;
 
         // TEST #3
         MonBean monBean3 = new MonBean();
