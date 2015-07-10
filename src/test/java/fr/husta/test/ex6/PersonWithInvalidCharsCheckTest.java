@@ -1,4 +1,4 @@
-package fr.husta.test.ex4;
+package fr.husta.test.ex6;
 
 import java.util.Locale;
 import java.util.Set;
@@ -12,7 +12,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class PersonWithCaseCheckTest
+public class PersonWithInvalidCharsCheckTest
 {
 
     private static Validator validator;
@@ -20,8 +20,8 @@ public class PersonWithCaseCheckTest
     @BeforeClass
     public static void initGlobal()
     {
-        // set default locale to FR
-        Locale.setDefault(Locale.FRENCH);
+        // set default locale to FR -> UTF-8 problem with IntelliJ ?!?
+        Locale.setDefault(Locale.ENGLISH);
 
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
@@ -30,11 +30,11 @@ public class PersonWithCaseCheckTest
     @Test
     public void testValidation() throws Exception
     {
-        Set<ConstraintViolation<PersonWithCaseCheck>> constraintViolations = null;
+        Set<ConstraintViolation<PersonWithInvalidCharsCheck>> constraintViolations = null;
         String interpolatedMessage = null;
 
         // TEST #1
-        PersonWithCaseCheck bean1 = new PersonWithCaseCheck();
+        PersonWithInvalidCharsCheck bean1 = new PersonWithInvalidCharsCheck();
         bean1.setName("TOTO");
         bean1.setFirstName("tutu");
 
@@ -42,23 +42,23 @@ public class PersonWithCaseCheckTest
         Assert.assertTrue(constraintViolations.size() == 0);
 
         // TEST #2
-        PersonWithCaseCheck bean2 = new PersonWithCaseCheck();
-        bean2.setName("TOTO");
+        PersonWithInvalidCharsCheck bean2 = new PersonWithInvalidCharsCheck();
+        bean2.setName("TO;TO?");
         bean2.setFirstName("TUTU");
 
         constraintViolations = validator.validate(bean2);
         Assert.assertTrue(constraintViolations.size() == 1);
         interpolatedMessage = constraintViolations.iterator().next().getMessage();
-        // Assert.assertEquals("Case mode must be LOWER.", interpolatedMessage);
-        Assert.assertEquals("La casse doit être positionnée à LOWER.", interpolatedMessage);
+        // Assert.assertEquals("Caractères invalides.", interpolatedMessage);
+        Assert.assertEquals("Invalid characters.", interpolatedMessage);
 
         // TEST #3
-        PersonWithCaseCheck bean3 = new PersonWithCaseCheck();
-        bean3.setName("tutu");
+        PersonWithInvalidCharsCheck bean3 = new PersonWithInvalidCharsCheck();
+        bean3.setName("tu?tu");
         bean3.setFirstName("TUTU");
 
         constraintViolations = validator.validate(bean3);
-        Assert.assertTrue(constraintViolations.size() == 2);
+        Assert.assertTrue(constraintViolations.size() == 1);
 
     }
 
