@@ -1,5 +1,7 @@
 package fr.husta.test.validation.constraints;
 
+import fr.husta.test.validation.constraints.impl.CheckCaseValidator;
+
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

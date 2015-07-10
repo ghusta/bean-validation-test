@@ -1,4 +1,7 @@
-package fr.husta.test.validation.constraints;
+package fr.husta.test.validation.constraints.impl;
+
+import fr.husta.test.validation.constraints.CaseMode;
+import fr.husta.test.validation.constraints.CheckCase;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
