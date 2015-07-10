@@ -50,7 +50,7 @@ public class PersonWithInvalidCharsCheckTest
         Assert.assertTrue(constraintViolations.size() == 1);
         interpolatedMessage = constraintViolations.iterator().next().getMessage();
         // Assert.assertEquals("Caractères invalides.", interpolatedMessage);
-        Assert.assertEquals("Invalid characters.", interpolatedMessage);
+        Assert.assertEquals("Invalid characters (must not contain [;?]).", interpolatedMessage);
 
         // TEST #3
         PersonWithInvalidCharsCheck bean3 = new PersonWithInvalidCharsCheck();
