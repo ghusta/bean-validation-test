@@ -11,7 +11,7 @@ import fr.husta.test.validation.constraints.CheckInvalidChars;
  *
  */
 public class CheckInvalidCharsValidator
-        implements ConstraintValidator<CheckInvalidChars, String>
+        implements ConstraintValidator<CheckInvalidChars, CharSequence>
 {
 
     private String invalidChars;
@@ -23,7 +23,7 @@ public class CheckInvalidCharsValidator
     }
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext context)
+    public boolean isValid(CharSequence value, ConstraintValidatorContext context)
     {
         if (value == null)
         {
@@ -35,7 +35,7 @@ public class CheckInvalidCharsValidator
             char[] liste = invalidChars.toCharArray();
             for (char c : liste)
             {
-                if (StringUtils.contains(value, c))
+                if (StringUtils.contains(value.toString(), c))
                 {
                     return false;
                 }
