@@ -44,18 +44,19 @@
         </dependency>
 
         <!--
-        Provided dependencies
+        Provided dependencies : Unified Expression Language (JSR 341)
+        http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html#validator-gettingstarted-uel
          -->
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>javax.el-api</artifactId>
-            <version>2.2.1</version>
+            <version>2.2.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>javax.el</artifactId>
-            <version>2.2.6</version>
+            <version>2.2.4</version>
             <scope>provided</scope>
         </dependency>
 
