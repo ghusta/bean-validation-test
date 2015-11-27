@@ -33,10 +33,8 @@ public class CheckCustomMessageValidator
             // Test : unwrap = impl of ConstraintValidatorContext
             // ConstraintValidatorContextImpl contextImpl = context.unwrap(ConstraintValidatorContextImpl.class);
             HibernateConstraintValidatorContext hibContext = context.unwrap(HibernateConstraintValidatorContext.class);
-
-            // hibContext.addExpressionVariable("you", value);
             hibContext.addExpressionVariable("name", value);
-            hibContext.buildConstraintViolationWithTemplate("{fr.husta.test.validation.constraints.CheckCustomMessage.message}").addConstraintViolation();
+            hibContext.buildConstraintViolationWithTemplate("{fr.husta.test.validation.constraints.CheckCustomMessage.message}").addConstraintViolation(); // method from ConstraintValidatorContext
 
             return false;
         }
