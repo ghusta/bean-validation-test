@@ -4,9 +4,11 @@ import javax.validation.constraints.NotNull;
 
 import fr.husta.test.validation.constraints.CaseMode;
 import fr.husta.test.validation.constraints.CheckCase;
+import fr.husta.test.validation.constraints.money.MonetaryAmountPositive;
 
-public class PersonWithCaseCheck
-{
+import java.math.BigDecimal;
+
+public class PersonWithCaseCheck {
 
     @NotNull
     @CheckCase(value = CaseMode.UPPER)
@@ -16,28 +18,34 @@ public class PersonWithCaseCheck
     @CheckCase(value = CaseMode.LOWER)
     private String firstName;
 
-    public PersonWithCaseCheck()
-    {
+    @MonetaryAmountPositive
+    private BigDecimal amount;
+
+    public PersonWithCaseCheck() {
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getFirstName()
-    {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName)
-    {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
     }
 
 }
