@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import fr.husta.test.validation.constraints.time.Before;
+import fr.husta.test.validation.constraints.time.BeforeDate;
 
 /**
  *
@@ -20,7 +20,7 @@ public class PersonWithDateBeforeCheck
 
     @NotNull
     @Past
-    @Before(date = "2000-01-01", dateTimeFormat = "yyyy-MM-dd")
+    @BeforeDate(date = "2000-01-01", dateTimeFormat = "yyyy-MM-dd")
     private Date dob;
 
     public PersonWithDateBeforeCheck()

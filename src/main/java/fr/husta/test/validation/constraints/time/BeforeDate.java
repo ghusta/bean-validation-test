@@ -11,25 +11,23 @@ import java.util.Date;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import fr.husta.test.validation.constraints.time.impl.AfterValidatorForDate;
+import fr.husta.test.validation.constraints.time.impl.BeforeValidatorForDate;
 
 /**
- * Similar to Bean Validation's @Future.
- * <br/>
- * Can be confusing with JUnit's @After ?
+ * Similar to Bean Validation's @Past.
  *
  * <p>
- * Use method : {@link Date#after(Date)}.
+ * Use method : {@link Date#before(Date)}.
  * </p>
  */
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = { AfterValidatorForDate.class })
-public @interface After
+@Constraint(validatedBy = { BeforeValidatorForDate.class })
+public @interface BeforeDate
 {
 
-    String message() default "Must be after {date}";
+    String message() default "Must be before {date}";
 
     Class<?>[] groups() default {};
 

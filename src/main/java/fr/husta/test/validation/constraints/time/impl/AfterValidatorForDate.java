@@ -8,20 +8,20 @@ import java.util.Date;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import fr.husta.test.validation.constraints.time.After;
+import fr.husta.test.validation.constraints.time.AfterDate;
 
 /**
  *
  */
 public class AfterValidatorForDate
-        implements ConstraintValidator<After, Date>
+        implements ConstraintValidator<AfterDate, Date>
 {
 
     private Date date;
     private DateFormat dateFormatter;
 
     @Override
-    public void initialize(After constraintAnnotation)
+    public void initialize(AfterDate constraintAnnotation)
     {
         dateFormatter = new SimpleDateFormat(constraintAnnotation.dateTimeFormat());
         try
