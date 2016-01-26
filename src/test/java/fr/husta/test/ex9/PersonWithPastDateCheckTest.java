@@ -1,0 +1,103 @@
+package fr.husta.test.ex9;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Date;
+import java.util.Locale;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+
+import org.apache.commons.lang.time.DateUtils;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class PersonWithPastDateCheckTest
+{
+
+    private static Validator validator;
+
+    @BeforeClass
+    public static void initGlobal()
+    {
+        // set default locale to FR -> UTF-8 problem with IntelliJ ?!?
+        Locale.setDefault(Locale.ENGLISH);
+
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        validator = factory.getValidator();
+    }
+
+    @Test
+    public void testDob_OK() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
+
+        Date now = new Date();
+        Date pastDate = DateUtils.addYears(now, -20);
+
+        PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
+        myPojo.setName("TOTO");
+        myPojo.setDob(pastDate);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() == 0);
+    }
+
+    @Test
+    public void testDob_KO_includeToday() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
+
+        Date now = new Date();
+
+        PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
+        myPojo.setName("TOTO");
+        myPojo.setDob(now);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() >= 1);
+    }
+
+    @Test
+    public void testDob_OK_excludeToday() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
+
+        Date now = new Date();
+        Date pastDate = DateUtils.addYears(now, -20);
+
+        PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
+        myPojo.setName("TOTO");
+        myPojo.setDob(pastDate);
+        myPojo.setDateIncludingToday(now);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() ==0);
+    }
+
+    @Test
+    public void testDob_KO() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
+
+        Date now = new Date();
+        Date datePlus20Years = DateUtils.addYears(now, 20);
+
+        PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
+        myPojo.setName("Too young");
+        myPojo.setDob(datePlus20Years);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() >= 1);
+        String interpolatedMessage = constraintViolations.iterator().next().getMessage();
+        assertTrue(interpolatedMessage.startsWith("Must be in the past"));
+    }
+
+}

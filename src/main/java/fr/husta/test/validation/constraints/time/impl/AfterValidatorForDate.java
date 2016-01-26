@@ -37,7 +37,7 @@ public class AfterValidatorForDate
     @Override
     public boolean isValid(Date value, ConstraintValidatorContext context)
     {
-        //null values are valid
+        // null values are valid
         if (value == null)
         {
             return true;
