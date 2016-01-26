@@ -35,7 +35,6 @@ public @interface PastDate
 
     /**
      * Exclude today in comparison.
-     * @return
      */
     boolean excludeToday() default true;
 
