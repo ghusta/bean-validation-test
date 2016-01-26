@@ -48,6 +48,25 @@ public class PersonWithPastDateCheckTest
     }
 
     @Test
+    public void testDob_KO() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
+
+        Date now = new Date();
+        Date datePlus20Years = DateUtils.addYears(now, 20);
+
+        PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
+        myPojo.setName("Too young");
+        myPojo.setDob(datePlus20Years);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() >= 1);
+        String interpolatedMessage = constraintViolations.iterator().next().getMessage();
+        assertTrue(interpolatedMessage.startsWith("Must be in the past"));
+    }
+
+    @Test
     public void testDob_KO_includeToday() throws Exception
     {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
@@ -78,26 +97,25 @@ public class PersonWithPastDateCheckTest
 
         constraintViolations = validator.validate(myPojo);
 
-        assertTrue(constraintViolations.size() ==0);
+        assertTrue(constraintViolations.size() == 0);
     }
 
     @Test
-    public void testDob_KO() throws Exception
+    public void testDob_OK_excludeToday_withOtherAnnotation() throws Exception
     {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
-        Date datePlus20Years = DateUtils.addYears(now, 20);
+        Date pastDate = DateUtils.addYears(now, -20);
 
         PersonWithPastDateCheck myPojo = new PersonWithPastDateCheck();
-        myPojo.setName("Too young");
-        myPojo.setDob(datePlus20Years);
+        myPojo.setName("TOTO");
+        myPojo.setDob(pastDate);
+        myPojo.setOtherDateExcludingToday(now);
 
         constraintViolations = validator.validate(myPojo);
 
         assertTrue(constraintViolations.size() >= 1);
-        String interpolatedMessage = constraintViolations.iterator().next().getMessage();
-        assertTrue(interpolatedMessage.startsWith("Must be in the past"));
     }
 
 }
