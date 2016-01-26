@@ -19,6 +19,7 @@ public class BeforeValidatorForDate
 
     private Date date;
     private DateFormat dateFormatter;
+    private boolean inclusive;
 
     @Override
     public void initialize(BeforeDate constraintAnnotation)
@@ -32,6 +33,7 @@ public class BeforeValidatorForDate
         {
             throw new ExceptionInInitializerError(e);
         }
+        inclusive = constraintAnnotation.inclusive();
     }
 
     @Override
@@ -43,7 +45,14 @@ public class BeforeValidatorForDate
             return true;
         }
 
-        return value.before(date);
+        if (inclusive)
+        {
+            return value.compareTo(date) <= 0;
+        }
+        else
+        {
+            return value.compareTo(date) < 0;
+        }
     }
 
 }

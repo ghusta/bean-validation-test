@@ -49,4 +49,11 @@ public @interface BeforeDate
      */
     String dateTimeFormat() default "yyyy-MM-dd'T'HH:mm:ss'Z'";
 
+    /**
+     * Is the date comparison inclusive ?
+     * <br/>
+     * Default : false.
+     */
+    boolean inclusive() default false;
+
 }

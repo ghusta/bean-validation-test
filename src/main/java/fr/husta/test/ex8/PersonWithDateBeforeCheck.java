@@ -23,6 +23,10 @@ public class PersonWithDateBeforeCheck
     @BeforeDate(date = "2000-01-01", dateTimeFormat = "yyyy-MM-dd")
     private Date dob;
 
+    @Past
+    @BeforeDate(date = "2000-01-01", dateTimeFormat = "yyyy-MM-dd", inclusive = true)
+    private Date otherDateInclusive;
+
     public PersonWithDateBeforeCheck()
     {
     }
@@ -56,4 +60,15 @@ public class PersonWithDateBeforeCheck
     {
         this.dob = dob;
     }
+
+    public Date getOtherDateInclusive()
+    {
+        return otherDateInclusive;
+    }
+
+    public void setOtherDateInclusive(Date otherDateInclusive)
+    {
+        this.otherDateInclusive = otherDateInclusive;
+    }
+
 }

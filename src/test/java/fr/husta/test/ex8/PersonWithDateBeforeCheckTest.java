@@ -2,6 +2,7 @@ package fr.husta.test.ex8;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.Set;
@@ -57,6 +58,23 @@ public class PersonWithDateBeforeCheckTest
         assertTrue(constraintViolations.size() >= 1);
         String interpolatedMessage = constraintViolations.iterator().next().getMessage();
         assertTrue(interpolatedMessage.startsWith("Must be before "));
+    }
+
+    @Test
+    public void testDob_inclusion() throws Exception
+    {
+        Set<ConstraintViolation<PersonWithDateBeforeCheck>> constraintViolations = null;
+
+        final Date dateLimitConstraint = new GregorianCalendar(2000, GregorianCalendar.JANUARY, 1).getTime();
+
+        PersonWithDateBeforeCheck myPojo = new PersonWithDateBeforeCheck();
+        myPojo.setName("TOTO");
+        myPojo.setDob(new GregorianCalendar(1995, GregorianCalendar.AUGUST, 31).getTime());
+        myPojo.setOtherDateInclusive(dateLimitConstraint);
+
+        constraintViolations = validator.validate(myPojo);
+
+        assertTrue(constraintViolations.size() == 0);
     }
 
 }
