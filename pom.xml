@@ -19,6 +19,7 @@
         <validation-api.version>1.1.0.GA</validation-api.version>
 
         <hibernate-validator.version>5.2.2.Final</hibernate-validator.version>
+        <!--<hibernate-validator.version>5.2.3.Final</hibernate-validator.version>-->
     </properties>
 
     <dependencies>
@@ -58,6 +59,13 @@
             <artifactId>javax.el</artifactId>
             <version>2.2.4</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- JODA-TIME -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.1</version>
         </dependency>
 
         <!-- TESTS -->
