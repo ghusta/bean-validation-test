@@ -68,7 +68,6 @@ public class MonBeanValidationTest
         assertTrue(constraintViolations.size() == 1);
 
         System.out.println(constraintViolations);
-
     }
 
     @Test
@@ -85,7 +84,24 @@ public class MonBeanValidationTest
         constraintViolations = validator.validate(monBean1, DecimalChecks.class);
         System.out.println(constraintViolations);
         assertTrue(constraintViolations.size() == 1);
+    }
 
+    @Test
+    public void testValidation_MonetaryAmountInteger() throws Exception
+    {
+        Set<ConstraintViolation<MonBean>> constraintViolations = null;
+
+        // TEST #1
+        MonBean monBean1 = new MonBean();
+        monBean1.setAge(10);
+        monBean1.setAge2(10);
+        monBean1.setName("bob");
+        monBean1.setLongNumber(123456L);
+        monBean1.setDecimalNumber(new BigDecimal("50.0"));
+        monBean1.setIntegerAmount(new BigDecimal("10.99"));
+
+        constraintViolations = validator.validate(monBean1);
+        assertTrue(constraintViolations.size() >= 1);
     }
 
 }

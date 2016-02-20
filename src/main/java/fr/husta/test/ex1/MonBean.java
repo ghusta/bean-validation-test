@@ -2,9 +2,16 @@ package fr.husta.test.ex1;
 
 import java.math.BigDecimal;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Range;
+
+import fr.husta.test.validation.constraints.money.MonetaryAmountInteger;
 
 public class MonBean
 {
@@ -25,6 +32,9 @@ public class MonBean
     @DecimalMin(value = "1.0", groups = { DecimalChecks.class })
     @DecimalMax(value = "100.0", inclusive = true, groups = { DecimalChecks.class })
     private BigDecimal decimalNumber;
+
+    @MonetaryAmountInteger
+    private BigDecimal integerAmount;
 
     @NotNull(message = "Nom obligatoire")
     @Size(min = 1, max = 10)
@@ -96,5 +106,15 @@ public class MonBean
     public void setDecimalNumber(BigDecimal decimalNumber)
     {
         this.decimalNumber = decimalNumber;
+    }
+
+    public BigDecimal getIntegerAmount()
+    {
+        return integerAmount;
+    }
+
+    public void setIntegerAmount(BigDecimal integerAmount)
+    {
+        this.integerAmount = integerAmount;
     }
 }

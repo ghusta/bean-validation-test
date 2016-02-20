@@ -10,6 +10,7 @@ import org.apache.commons.lang.time.DateUtils;
 import fr.husta.test.validation.constraints.time.PastDate;
 
 /**
+ * PastDate Validator for type {@link java.util.Date}.
  *
  */
 public class PastDateValidatorForDate
