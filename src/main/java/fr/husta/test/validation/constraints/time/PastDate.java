@@ -23,19 +23,19 @@ import fr.husta.test.validation.constraints.time.impl.PastDateValidatorForDate;
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = { PastDateValidatorForDate.class })
+@Constraint(validatedBy = { PastDateValidatorForDate.class /*, PastDateValidatorForReadablePartial.class */ })
 public @interface PastDate
 {
 
-    String message() default "Must be in the past - excluding today : {excludeToday}";
+    String message() default "Must be in the past - excluding today : {includeToday}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 
     /**
-     * Exclude today in comparison.
+     * Include today in comparison.
      */
-    boolean excludeToday() default true;
+    boolean includeToday() default false;
 
 }

@@ -19,10 +19,10 @@ public class PersonWithPastDateCheck
     private String firstName;
 
     @NotNull
-    @PastDate(excludeToday = true)
+    @PastDate(includeToday = false)
     private Date dob;
 
-    @PastDate(excludeToday = false)
+    @PastDate(includeToday = true)
     private Date dateIncludingToday;
 
     @PastDayExcludingToday

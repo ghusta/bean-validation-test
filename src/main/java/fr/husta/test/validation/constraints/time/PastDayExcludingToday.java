@@ -15,7 +15,7 @@ import javax.validation.ReportAsSingleViolation;
  * Similar to Bean Validation's @Past, excluding today.
  *
  */
-@PastDate(excludeToday = true)
+@PastDate(includeToday = false)
 @ReportAsSingleViolation
 @Target({ METHOD, FIELD, ANNOTATION_TYPE })
 @Retention(RUNTIME)

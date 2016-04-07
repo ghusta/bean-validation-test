@@ -17,12 +17,12 @@ public class PastDateValidatorForDate
         implements ConstraintValidator<PastDate, Date>
 {
 
-    private boolean excludeToday;
+    private boolean includeToday;
 
     @Override
     public void initialize(PastDate constraintAnnotation)
     {
-        excludeToday = constraintAnnotation.excludeToday();
+        includeToday = constraintAnnotation.includeToday();
     }
 
     @Override
@@ -36,7 +36,7 @@ public class PastDateValidatorForDate
 
         Date now = new Date();
 
-        if (!excludeToday)
+        if (includeToday)
         {
             return value.before(now);
         }
