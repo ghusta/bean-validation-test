@@ -38,7 +38,7 @@ public @interface AfterDate
      * <br/>
      * Use the date format of {@link #dateTimeFormat()}.
      * <br/>
-     * See <a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.6.1">9.6.1. Annotation Type Elements</a>.
+     * See <a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.6.1">JLS 9.6.1. Annotation Type Elements</a>.
      */
     String date();
 
