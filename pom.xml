@@ -10,6 +10,10 @@
     <name>bean-validation-test</name>
     <url>https://github.com/ghusta/bean-validation-test</url>
 
+    <prerequisites>
+        <maven>3.0</maven>
+    </prerequisites>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
