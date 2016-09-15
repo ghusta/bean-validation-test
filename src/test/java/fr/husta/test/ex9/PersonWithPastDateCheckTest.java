@@ -82,6 +82,11 @@ public class PersonWithPastDateCheckTest
         assertTrue(constraintViolations.size() >= 1);
     }
 
+    /**
+     * TODO: corriger test fail aleatoire
+     *
+     * @throws Exception
+     */
     @Test
     public void testDob_OK_excludeToday() throws Exception
     {
@@ -97,7 +102,7 @@ public class PersonWithPastDateCheckTest
 
         constraintViolations = validator.validate(myPojo);
 
-        assertTrue(constraintViolations.size() == 0);
+        assertTrue(constraintViolations.isEmpty());
     }
 
     @Test
