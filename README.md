@@ -24,6 +24,10 @@ API Documentation
 
 ### Hibernate Validator Documentation
 
+From 5.3 version :
+
+* [JSR 349 Reference Implementation -- Reference Guide](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)
+
 From 5.2 version :
 
 * [JSR 349 Reference Implementation -- Reference Guide](http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/)
