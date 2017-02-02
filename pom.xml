@@ -25,6 +25,9 @@
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
     </properties>
 
+    <build>
+    </build>
+
     <dependencies>
 
         <!--
@@ -38,6 +41,12 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <!-- APT -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-annotation-processor</artifactId>
             <version>${hibernate-validator.version}</version>
         </dependency>
 
