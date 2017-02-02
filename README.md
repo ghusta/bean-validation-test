@@ -9,8 +9,9 @@ API Documentation
 
 ### beanvalidation.org
 
-* [Bean Validation 1.0 (JSR 303)](http://beanvalidation.org/1.0/)
-* [Bean Validation 1.1 (JSR 349)](http://beanvalidation.org/1.1/)
+* [Bean Validation 1.0](http://beanvalidation.org/1.0/) ([JSR 303](https://jcp.org/en/jsr/detail?id=303))
+* [Bean Validation 1.1](http://beanvalidation.org/1.1/) ([JSR 349](https://jcp.org/en/jsr/detail?id=349))
+* [Bean Validation 2.0](http://beanvalidation.org/latest-draft/spec/) ([JSR 380](https://jcp.org/en/jsr/detail?id=380))
 
 ### Bean Validation 1.0 in Java EE 6
 
