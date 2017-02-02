@@ -24,9 +24,14 @@ API Documentation
 
 ### Hibernate Validator Documentation
 
+From 5.4 version :
+
+* [JSR 380 Reference Implementation: Reference Guide](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)
+
 From 5.3 version :
 
-* [JSR 349 Reference Implementation -- Reference Guide](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)
+* [JSR 349 Reference Implementation -- Reference Guide](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html/)
+* [Chapter 12. Annotation Processor](http://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#validator-annotation-processor)
 
 From 5.2 version :
 
