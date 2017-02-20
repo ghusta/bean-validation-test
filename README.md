@@ -28,6 +28,7 @@ API Documentation
 From 5.4 version :
 
 * [JSR 380 Reference Implementation: Reference Guide](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)
+* Constraint `@Currency` added, for use with JSR-354 [(Money and Currency API)](http://java.net/projects/javamoney) (Java 7 (backport) or 8)
 
 From 5.3 version :
 

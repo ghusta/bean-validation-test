@@ -17,15 +17,27 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 
         <validation-api.version>1.1.0.GA</validation-api.version>
 
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
+
+        <javax-money.version>1.0.1</javax-money.version>
+        <moneta.version>1.1</moneta.version>
     </properties>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.6.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>
@@ -48,6 +60,23 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-annotation-processor</artifactId>
             <version>${hibernate-validator.version}</version>
+        </dependency>
+
+        <!-- JSR-354 -->
+        <!-- Compiled with Java 8 -->
+        <!-- Use money-api-bp for Java 7 -->
+        <dependency>
+            <groupId>javax.money</groupId>
+            <artifactId>money-api</artifactId>
+            <!--<artifactId>money-api-bp</artifactId>-->
+            <version>${javax-money.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.javamoney</groupId>
+            <artifactId>moneta</artifactId>
+            <version>${moneta.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
