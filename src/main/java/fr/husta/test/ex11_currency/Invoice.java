@@ -6,7 +6,7 @@ import javax.money.MonetaryAmount;
 import javax.validation.constraints.DecimalMax;
 
 /**
- * For {@link MonetaryAmount}, see classes *ValidatorForMonetaryAmount,
+ * For {@link MonetaryAmount}, see classes <i>*ValidatorForMonetaryAmount</i>,
  * like {@link org.hibernate.validator.internal.constraintvalidators.bv.money.CurrencyValidatorForMonetaryAmount}
  * or {@link org.hibernate.validator.internal.constraintvalidators.bv.money.MaxValidatorForMonetaryAmount}.
  */
