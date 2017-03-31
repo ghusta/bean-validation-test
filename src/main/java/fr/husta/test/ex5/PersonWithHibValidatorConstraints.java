@@ -10,7 +10,9 @@ import javax.validation.constraints.NotNull;
  * 
  * @author HUSTA
  *
+ * @deprecated Not anymore Hibernate Validator custom constraints
  */
+@Deprecated
 public class PersonWithHibValidatorConstraints
 {
 
