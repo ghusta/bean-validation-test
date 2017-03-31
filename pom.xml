@@ -23,6 +23,8 @@
         <!--<validation-api.version>2.0.0</validation-api.version>-->
         <hibernate-validator.version>6.0.0.Alpha2</hibernate-validator.version>
 
+        <javax.el.version>3.0.1-b08</javax.el.version>
+
         <javax-money.version>1.0.1</javax-money.version>
         <moneta.version>1.1</moneta.version>
     </properties>
@@ -50,7 +52,7 @@
 		-->
 
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate-validator.version}</version>
         </dependency>
@@ -88,16 +90,16 @@
         Provided dependencies : Unified Expression Language (JSR 341)
         http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html#validator-gettingstarted-uel
          -->
+        <!--<dependency>-->
+            <!--<groupId>javax.el</groupId>-->
+            <!--<artifactId>javax.el-api</artifactId>-->
+            <!--<version>${javax.el.version}</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>javax.el-api</artifactId>
-            <version>2.2.5</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
+            <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
-            <version>2.2.6</version>
+            <version>${javax.el.version}</version>
             <scope>provided</scope>
         </dependency>
 
