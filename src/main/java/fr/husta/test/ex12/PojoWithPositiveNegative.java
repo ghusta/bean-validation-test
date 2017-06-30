@@ -1,8 +1,10 @@
 package fr.husta.test.ex12;
 
 import javax.validation.constraints.Negative;
+import javax.validation.constraints.NegativeOrZero;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
 
 /**
@@ -10,15 +12,15 @@ import java.math.BigDecimal;
  */
 public class PojoWithPositiveNegative {
 
-    @Positive
+    @PositiveOrZero
     @NotNull
     private BigDecimal numberPos1;
 
-    @Positive(strict = true)
+    @Positive
     @NotNull
     private Long numberStrictlyPos2;
 
-    @Negative
+    @NegativeOrZero
     @NotNull
     private BigDecimal numberNeg1;
 
