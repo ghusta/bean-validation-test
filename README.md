@@ -1,7 +1,7 @@
 bean-validation-test
 ====================
 
-Sample project for testing Bean Validation 1.0 (JSR 303) &amp; Bean Validation 1.1 (JSR 349)
+Sample project for testing Bean Validation 1.0 (JSR 303), Bean Validation 1.1 (JSR 349) &amp; Bean Validation 2.0 (JSR 380).
 
 
 API Documentation
