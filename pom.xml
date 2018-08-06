@@ -24,7 +24,7 @@
 
         <javax.el.version>3.0.1-b08</javax.el.version>
 
-        <javax-money.version>1.0.1</javax-money.version>
+        <javax-money.version>1.0.3</javax-money.version>
         <moneta.version>1.3</moneta.version>
     </properties>
 
