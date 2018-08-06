@@ -1,15 +1,14 @@
 package fr.husta.test.ex2;
 
-import java.util.Set;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
-
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.util.Set;
 
 /**
  * Checks that validation with groups are not overlapping.
@@ -40,6 +39,7 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person1);
         Assert.assertTrue(constraintViolations.size() == 0);
+
     }
 
     @Test
@@ -62,6 +62,7 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person3, PersonChecksPart1.class);
         Assert.assertTrue(constraintViolations.size() == 1);
+
     }
 
     @Test
@@ -86,6 +87,7 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person5, PersonChecksPart2.class);
         Assert.assertTrue(constraintViolations.size() == 1);
+
     }
 
     @Test
@@ -110,6 +112,7 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person7, PersonChecksPart1.class, PersonChecksPart2.class);
         Assert.assertTrue(constraintViolations.size() == 2);
+
     }
 
 }
