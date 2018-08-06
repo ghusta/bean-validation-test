@@ -1,7 +1,5 @@
 package fr.husta.test.ex12;
 
-import fr.husta.test.ex11_currency.Invoice;
-import org.javamoney.moneta.Money;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -13,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PojoWithPositiveNegativeTest {
 
@@ -41,7 +39,7 @@ public class PojoWithPositiveNegativeTest {
 
         constraintViolations = validator.validate(pojo);
 
-        assertTrue(constraintViolations.size() == 0);
+        assertThat(constraintViolations).isEmpty();
     }
 
 }

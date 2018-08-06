@@ -18,7 +18,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.Set;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class InvoiceTest
 {
@@ -42,7 +42,7 @@ public class InvoiceTest
 
         constraintViolations = validator.validate(invoice);
 
-        assertTrue(constraintViolations.size() == 0);
+        assertThat(constraintViolations).isEmpty();
     }
 
     @Test
@@ -55,7 +55,7 @@ public class InvoiceTest
 
         constraintViolations = validator.validate(invoice);
 
-        assertTrue(constraintViolations.size() > 0);
+        assertThat(constraintViolations).isNotEmpty();
     }
 
     @Test
@@ -69,7 +69,7 @@ public class InvoiceTest
 
         constraintViolations = validator.validate(invoice);
 
-        assertTrue(constraintViolations.size() > 0);
+        assertThat(constraintViolations).isNotEmpty();
     }
 
     @Test
@@ -86,7 +86,7 @@ public class InvoiceTest
 
         constraintViolations = validator.validate(invoice);
 
-        assertTrue(constraintViolations.size() > 0);
+        assertThat(constraintViolations).isNotEmpty();
     }
 
 }

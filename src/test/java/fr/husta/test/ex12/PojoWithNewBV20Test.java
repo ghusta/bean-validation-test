@@ -10,7 +10,7 @@ import javax.validation.ValidatorFactory;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PojoWithNewBV20Test {
 
@@ -36,7 +36,7 @@ public class PojoWithNewBV20Test {
 
         constraintViolations = validator.validate(pojo);
 
-        assertTrue(constraintViolations.size() == 0);
+        assertThat(constraintViolations).isEmpty();
     }
 
 }

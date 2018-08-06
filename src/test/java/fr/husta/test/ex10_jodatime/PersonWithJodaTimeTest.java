@@ -12,7 +12,7 @@ import javax.validation.ValidatorFactory;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PersonWithJodaTimeTest {
 
@@ -38,7 +38,7 @@ public class PersonWithJodaTimeTest {
 
         constraintViolations = validator.validate(myPojo);
 
-        assertTrue(constraintViolations.size() == 0);
+        assertThat(constraintViolations).isEmpty();
     }
 
     @Test
@@ -52,7 +52,7 @@ public class PersonWithJodaTimeTest {
 
         constraintViolations = validator.validate(myPojo);
 
-        assertTrue(constraintViolations.size() >= 1);
+        assertThat(constraintViolations).isNotEmpty();
     }
 
 }
