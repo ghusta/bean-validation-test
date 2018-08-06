@@ -20,8 +20,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <!--<validation-api.version>2.0.0.Final</validation-api.version>-->
-        <hibernate-validator.version>6.0.9.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.0.11.Final</hibernate-validator.version>
 
         <javax.el.version>3.0.1-b08</javax.el.version>
 
