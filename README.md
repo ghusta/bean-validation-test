@@ -13,6 +13,10 @@ API Documentation
 * [Bean Validation 1.1](http://beanvalidation.org/1.1/) ([JSR 349](https://jcp.org/en/jsr/detail?id=349))
 * [Bean Validation 2.0](http://beanvalidation.org/latest-draft/spec/) ([JSR 380](https://jcp.org/en/jsr/detail?id=380))
 
+NOTE:
+New source repository has moved under : https://github.com/eclipse-ee4j/beanvalidation-api.
+The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` (as of 2.0.1).
+
 ### Bean Validation 1.0 in Java EE 6
 
 * [Using Bean Validation](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html)
