@@ -1,6 +1,6 @@
 package fr.husta.test.ex9;
 
-import org.apache.commons.lang.time.DateUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -15,14 +15,12 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PersonWithPastDateCheckTest
-{
+public class PersonWithPastDateCheckTest {
 
     private static Validator validator;
 
     @BeforeClass
-    public static void initGlobal()
-    {
+    public static void initGlobal() {
         // set default locale to FR -> UTF-8 problem with IntelliJ ?!?
         Locale.setDefault(Locale.ENGLISH);
 
@@ -31,8 +29,7 @@ public class PersonWithPastDateCheckTest
     }
 
     @Test
-    public void testDob_OK() throws Exception
-    {
+    public void testDob_OK() throws Exception {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
@@ -48,8 +45,7 @@ public class PersonWithPastDateCheckTest
     }
 
     @Test
-    public void testDob_KO() throws Exception
-    {
+    public void testDob_KO() throws Exception {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
@@ -67,8 +63,7 @@ public class PersonWithPastDateCheckTest
     }
 
     @Test
-    public void testDob_KO_includeToday() throws Exception
-    {
+    public void testDob_KO_includeToday() throws Exception {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
@@ -89,8 +84,7 @@ public class PersonWithPastDateCheckTest
      */
     @Test
     @Ignore("Bug ?")
-    public void testDob_OK_excludeToday() throws Exception
-    {
+    public void testDob_OK_excludeToday() throws Exception {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
@@ -107,8 +101,7 @@ public class PersonWithPastDateCheckTest
     }
 
     @Test
-    public void testDob_OK_excludeToday_withOtherAnnotation() throws Exception
-    {
+    public void testDob_OK_excludeToday_withOtherAnnotation() throws Exception {
         Set<ConstraintViolation<PersonWithPastDateCheck>> constraintViolations = null;
 
         Date now = new Date();
