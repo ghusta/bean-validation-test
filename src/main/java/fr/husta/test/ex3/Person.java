@@ -1,6 +1,6 @@
 package fr.husta.test.ex3;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class Person
 {

@@ -1,7 +1,7 @@
 package fr.husta.test.ex3;
 
-import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.Min;
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.Min;
 
 public class Driver extends Person
 {

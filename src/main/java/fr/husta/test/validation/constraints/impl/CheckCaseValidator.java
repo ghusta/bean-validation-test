@@ -3,8 +3,8 @@ package fr.husta.test.validation.constraints.impl;
 import fr.husta.test.validation.constraints.CaseMode;
 import fr.husta.test.validation.constraints.CheckCase;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class CheckCaseValidator implements ConstraintValidator<CheckCase, String>
 {

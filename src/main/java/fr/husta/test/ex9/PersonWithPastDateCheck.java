@@ -2,7 +2,7 @@ package fr.husta.test.ex9;
 
 import java.util.Date;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 import fr.husta.test.validation.constraints.time.PastDate;
 import fr.husta.test.validation.constraints.time.PastDayExcludingToday;

@@ -3,7 +3,7 @@ package fr.husta.test.ex11_currency;
 import org.hibernate.validator.constraints.Currency;
 
 import javax.money.MonetaryAmount;
-import javax.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMax;
 
 /**
  * For {@link MonetaryAmount}, see classes <i>*ValidatorForMonetaryAmount</i>,

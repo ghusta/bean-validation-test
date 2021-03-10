@@ -3,8 +3,8 @@ package fr.husta.test.ex10_jodatime;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
-import javax.validation.constraints.Future;
-import javax.validation.constraints.Past;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.Past;
 
 public class PersonWithJodaTime {
 
