@@ -10,8 +10,7 @@ Sample project for testing Bean Validation 1.0 (JSR 303), Bean Validation 1.1 (J
 * http://beanvalidation.org/1.1/[Bean Validation 1.1] (https://jcp.org/en/jsr/detail?id=349[JSR 349])
 * http://beanvalidation.org/latest-draft/spec/[Bean Validation 2.0] (https://jcp.org/en/jsr/detail?id=380[JSR 380])
 
-NOTE:
-New source repository has moved under : https://github.com/eclipse-ee4j/beanvalidation-api.
+NOTE: New source repository has moved under : https://github.com/eclipse-ee4j/beanvalidation-api.
 The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` (as of 2.0.1).
 
 === Bean Validation 1.0 in Java EE 6
