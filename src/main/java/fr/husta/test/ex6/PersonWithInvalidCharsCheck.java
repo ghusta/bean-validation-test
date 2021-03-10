@@ -1,6 +1,6 @@
 package fr.husta.test.ex6;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 import fr.husta.test.validation.constraints.CheckInvalidChars;
 

@@ -2,8 +2,8 @@ package fr.husta.test.ex8;
 
 import java.util.Date;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
 
 import fr.husta.test.validation.constraints.time.BeforeDate;
 

@@ -3,8 +3,8 @@ package fr.husta.test.validation.constraints.time.impl;
 import fr.husta.test.validation.constraints.time.PastDate;
 import org.apache.commons.lang3.time.DateUtils;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 import java.util.Date;
 
 /**
