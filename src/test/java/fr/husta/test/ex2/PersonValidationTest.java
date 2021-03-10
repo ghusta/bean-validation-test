@@ -7,8 +7,7 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -41,7 +40,6 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person1);
         Assert.assertTrue(constraintViolations.size() == 0);
-
     }
 
     @Test
@@ -64,7 +62,6 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person3, PersonChecksPart1.class);
         Assert.assertTrue(constraintViolations.size() == 1);
-
     }
 
     @Test
@@ -89,7 +86,6 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person5, PersonChecksPart2.class);
         Assert.assertTrue(constraintViolations.size() == 1);
-
     }
 
     @Test
@@ -114,7 +110,6 @@ public class PersonValidationTest
 
         constraintViolations = validator.validate(person7, PersonChecksPart1.class, PersonChecksPart2.class);
         Assert.assertTrue(constraintViolations.size() == 2);
-
     }
 
 }
