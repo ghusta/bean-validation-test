@@ -12,10 +12,6 @@ public class CheckCustomMessageValidator
         implements ConstraintValidator<CheckCustomMessage, String> {
 
     @Override
-    public void initialize(CheckCustomMessage constraintAnnotation) {
-    }
-
-    @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         if ("OK".equals(value)) {
             return true;
@@ -25,6 +21,7 @@ public class CheckCustomMessageValidator
             hibContext
                     .addExpressionVariable("name", value)
                     .buildConstraintViolationWithTemplate("{fr.husta.test.validation.constraints.CheckCustomMessage.message}")
+                    .enableExpressionLanguage()
                     .addConstraintViolation(); // method from ConstraintValidatorContext
 
             return false;
