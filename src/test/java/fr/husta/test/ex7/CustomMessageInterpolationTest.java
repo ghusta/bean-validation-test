@@ -16,6 +16,8 @@ import org.junit.Test;
 
 /**
  * Test for : HV-701 (closed) & BVAL-339 (open)
+ *
+ * Changes as of HV 6.2 : https://in.relation.to/2021/01/06/hibernate-validator-700-62-final-released/
  */
 public class CustomMessageInterpolationTest
 {
