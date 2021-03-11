@@ -22,13 +22,17 @@ The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` 
 
 === Bean Validation 1.1 in Java EE 7
 
-* https://docs.oracle.com/javaee/7/tutorial/partbeanvalidation.htm[Overview]
+* https://docs.oracle.com/javaee/7/tutorial/partbeanvalidation.htm[Bean Validation]
 ** https://docs.oracle.com/javaee/7/tutorial/bean-validation.htm[Introduction to Bean Validation]
 *** https://docs.oracle.com/javaee/7/tutorial/bean-validation001.htm[Using Bean Validation Constraints]
 *** etc.
 ** https://docs.oracle.com/javaee/7/tutorial/bean-validation-advanced.htm[Bean Validation: Advanced Topics]
 *** https://docs.oracle.com/javaee/7/tutorial/bean-validation-advanced001.htm[Creating Custom Constraints]
 *** etc.
+
+=== Bean Validation 2.0 in Jakarta EE 8
+
+* https://eclipse-ee4j.github.io/jakartaee-tutorial/partbeanvalidation.html[Bean Validation]
 
 === Hibernate Validator Documentation
 
