@@ -8,22 +8,26 @@ Sample project for testing Bean Validation 1.0 (JSR 303), Bean Validation 1.1 (J
 
 === beanvalidation.org
 
-* http://beanvalidation.org/1.0/[Bean Validation 1.0] (https://jcp.org/en/jsr/detail?id=303[JSR 303])
-* http://beanvalidation.org/1.1/[Bean Validation 1.1] (https://jcp.org/en/jsr/detail?id=349[JSR 349])
-* http://beanvalidation.org/latest-draft/spec/[Bean Validation 2.0] (https://jcp.org/en/jsr/detail?id=380[JSR 380])
+* https://beanvalidation.org/1.0/[Bean Validation 1.0] (https://jcp.org/en/jsr/detail?id=303[JSR 303])
+* https://beanvalidation.org/1.1/[Bean Validation 1.1] (https://jcp.org/en/jsr/detail?id=349[JSR 349])
+* https://beanvalidation.org/latest-draft/spec/[Bean Validation 2.0] (https://jcp.org/en/jsr/detail?id=380[JSR 380])
 
 NOTE: New source repository has moved under : https://github.com/eclipse-ee4j/beanvalidation-api.
 The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` (as of 2.0.1).
 
 === Bean Validation 1.0 in Java EE 6
 
-* http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html[Using Bean Validation]
+* https://docs.oracle.com/javaee/6/tutorial/doc/gircz.html[Using Bean Validation]
 
 === Bean Validation 1.1 in Java EE 7
 
-* http://docs.oracle.com/javaee/7/tutorial/doc/overview008.htm#GJXTY[Overview]
-* http://docs.oracle.com/javaee/7/tutorial/doc/jsf-develop004.htm#GIRCZ[Using Bean Validation]
-* http://docs.oracle.com/javaee/7/tutorial/doc/bean-validation-advanced.htm#GKAHP[Bean Validation: Advanced Topics]
+* https://docs.oracle.com/javaee/7/tutorial/partbeanvalidation.htm[Overview]
+** https://docs.oracle.com/javaee/7/tutorial/bean-validation.htm[Introduction to Bean Validation]
+*** https://docs.oracle.com/javaee/7/tutorial/bean-validation001.htm[Using Bean Validation Constraints]
+*** etc.
+** https://docs.oracle.com/javaee/7/tutorial/bean-validation-advanced.htm[Bean Validation: Advanced Topics]
+*** https://docs.oracle.com/javaee/7/tutorial/bean-validation-advanced001.htm[Creating Custom Constraints]
+*** etc.
 
 === Hibernate Validator Documentation
 
@@ -35,30 +39,30 @@ From 5.4 version :
 From 5.3 version :
 
 * https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
-* http://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#validator-annotation-processor[Chapter 12. Annotation Processor]
+* https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#validator-annotation-processor[Chapter 12. Annotation Processor]
 
 From 5.2 version :
 
-* http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
-* http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html[Chapter 1. Getting started]
+* https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
+* https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html[Chapter 1. Getting started]
 * Section 1.4. http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html#_java_8_support[Java 8 support]
 * …
 
 From 5.0 version :
 
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/validator-gettingstarted.html[Chapter 1. Getting started]
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-bean-constraints.html[Chapter 2. Declaring and validating bean constraints]
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-method-constraints.html[Chapter 3. Declaring and validating method constraints]
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-message-interpolation.html[Chapter 4. Interpolating constraint error messages] =&gt; Use Unified Expression Language - http://jcp.org/en/jsr/detail?id=341[JSR-341]
-* http://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-groups.html[Chapter 5. Grouping constraints]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/validator-gettingstarted.html[Chapter 1. Getting started]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-bean-constraints.html[Chapter 2. Declaring and validating bean constraints]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-method-constraints.html[Chapter 3. Declaring and validating method constraints]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-message-interpolation.html[Chapter 4. Interpolating constraint error messages] =&gt; Use Unified Expression Language - http://jcp.org/en/jsr/detail?id=341[JSR-341]
+* https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html/chapter-groups.html[Chapter 5. Grouping constraints]
 * etc.
 
 From 4.3 version :
 
-* http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/[JSR 303 Reference Implementation – Reference Guide]
-* http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-gettingstarted.html[Chapter 1. Getting started]
-* http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-usingvalidator.html[Chapter 2. Validation step by step]
-* http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-customconstraints.html[Chapter 3. Creating custom constraints]
-* http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-xmlconfiguration.html[Chapter 4. XML configuration]
+* https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/[JSR 303 Reference Implementation – Reference Guide]
+* https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-gettingstarted.html[Chapter 1. Getting started]
+* https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-usingvalidator.html[Chapter 2. Validation step by step]
+* https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-customconstraints.html[Chapter 3. Creating custom constraints]
+* https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/validator-xmlconfiguration.html[Chapter 4. XML configuration]
 * etc.
