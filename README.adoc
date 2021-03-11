@@ -36,14 +36,26 @@ The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` 
 
 === Hibernate Validator Documentation
 
+From latest stable version :
+
+* https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/[Reference Implementation: Reference Guide]
+
+From 7.0 version :
+
+* https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/[Reference Implementation: Reference Guide]
+
+From 6.0 version :
+
+* https://docs.jboss.org/hibernate/validator/6.0/reference/en-US/html_single/[JSR 380 Reference Implementation: Reference Guide]
+
 From 5.4 version :
 
-* https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/[JSR 380 Reference Implementation: Reference Guide]
+* https://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/[JSR 380 Reference Implementation: Reference Guide]
 * Constraint `@Currency` added, for use with JSR-354 http://java.net/projects/javamoney[(Money and Currency API)] (Java 7 (backport) or 8)
 
 From 5.3 version :
 
-* https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html/[JSR 349 Reference Implementation – Reference Guide]
+* https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/[JSR 349 Reference Implementation – Reference Guide]
 * https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#validator-annotation-processor[Chapter 12. Annotation Processor]
 
 From 5.2 version :
