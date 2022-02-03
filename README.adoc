@@ -11,6 +11,7 @@ Sample project for testing Bean Validation 1.0 (JSR 303), Bean Validation 1.1 (J
 * https://beanvalidation.org/1.0/[Bean Validation 1.0] (https://jcp.org/en/jsr/detail?id=303[JSR 303])
 * https://beanvalidation.org/1.1/[Bean Validation 1.1] (https://jcp.org/en/jsr/detail?id=349[JSR 349])
 * https://beanvalidation.org/2.0/[Bean Validation 2.0] (https://jcp.org/en/jsr/detail?id=380[JSR 380])
+* https://jakarta.ee/specifications/bean-validation/3.0/[Jakarta Bean Validation 3.0]
 * _https://beanvalidation.org/latest-draft/spec/[Bean Validation latest draft]_
 
 NOTE: New source repository has moved under : https://github.com/eclipse-ee4j/beanvalidation-api.
@@ -30,9 +31,13 @@ The new Maven coordinates will be : `jakarta.validation:jakarta.validation-api` 
 *** https://docs.oracle.com/javaee/7/tutorial/bean-validation-advanced001.htm[Creating Custom Constraints]
 *** etc.
 
-=== Bean Validation 2.0 in Jakarta EE 8
+=== Jakarta Bean Validation 2.0 in Jakarta EE 8
 
-* https://eclipse-ee4j.github.io/jakartaee-tutorial/partbeanvalidation.html[Bean Validation]
+* https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-bean-validation[Bean Validation]
+
+=== Jakarta Bean Validation 3.0 in Jakarta EE 9
+
+* https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-bean-validation[Bean Validation]
 
 === Hibernate Validator Documentation
 
