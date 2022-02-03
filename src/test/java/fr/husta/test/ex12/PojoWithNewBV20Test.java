@@ -39,4 +39,17 @@ public class PojoWithNewBV20Test {
         assertThat(constraintViolations).isEmpty();
     }
 
+    @Test
+    public void testKO() throws Exception {
+        Set<ConstraintViolation<PojoWithNewBV20>> constraintViolations = null;
+
+        PojoWithNewBV20 pojo = new PojoWithNewBV20();
+        pojo.setField1("   ");
+        pojo.setField2("");
+        pojo.setField3("hello");
+
+        constraintViolations = validator.validate(pojo);
+
+        assertThat(constraintViolations).hasSize(3);
+    }
 }
