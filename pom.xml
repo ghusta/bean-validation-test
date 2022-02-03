@@ -86,17 +86,15 @@
         Provided dependencies : Unified Expression Language (JSR 341)
         http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch01.html#validator-gettingstarted-uel
          -->
-        <!--<dependency>-->
-            <!--<groupId>javax.el</groupId>-->
-            <!--<artifactId>javax.el-api</artifactId>-->
-            <!--<version>${javax.el.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>jakarta.el</groupId>
+            <artifactId>jakarta.el-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.el</artifactId>
-            <version>${javax.el.version}</version>
-            <scope>provided</scope>
+            <artifactId>jakarta.el</artifactId>
+            <version>4.0.2</version>
         </dependency>
 
         <!-- JODA-TIME -->
