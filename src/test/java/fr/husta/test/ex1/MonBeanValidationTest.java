@@ -10,7 +10,7 @@ import javax.validation.ValidatorFactory;
 import java.math.BigDecimal;
 import java.util.Set;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Simple validation tests.
@@ -44,7 +44,7 @@ public class MonBeanValidationTest
 
         constraintViolations = validator.validate(monBean1);
         System.out.println(constraintViolations);
-        assertTrue(constraintViolations.size() == 2);
+        assertThat(constraintViolations).hasSize(2);
 
         // TEST #2
         MonBean monBean2 = new MonBean();
@@ -53,7 +53,7 @@ public class MonBeanValidationTest
         //        monBean2.setName("toto");
 
         constraintViolations = validator.validate(monBean2);
-        assertTrue(constraintViolations.size() == 2);
+        assertThat(constraintViolations).hasSize(2);
 
         System.out.println(constraintViolations);
 
@@ -65,7 +65,7 @@ public class MonBeanValidationTest
         monBean3.setFirstName(null);
 
         constraintViolations = validator.validate(monBean3, Groupe1Checks.class);
-        assertTrue(constraintViolations.size() == 1);
+        assertThat(constraintViolations).hasSize(1);
 
         System.out.println(constraintViolations);
     }
@@ -83,7 +83,7 @@ public class MonBeanValidationTest
 
         constraintViolations = validator.validate(monBean1, DecimalChecks.class);
         System.out.println(constraintViolations);
-        assertTrue(constraintViolations.size() == 1);
+        assertThat(constraintViolations).hasSize(1);
     }
 
     @Test
@@ -101,7 +101,7 @@ public class MonBeanValidationTest
         monBean1.setIntegerAmount(new BigDecimal("10.99"));
 
         constraintViolations = validator.validate(monBean1);
-        assertTrue(constraintViolations.size() >= 1);
+        assertThat(constraintViolations).hasSizeGreaterThanOrEqualTo(1);
     }
 
 }
